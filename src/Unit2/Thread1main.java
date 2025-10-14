@@ -4,8 +4,10 @@ public class Thread1main {
     public static void main(String[] args) {
         Thread1 th1=new Thread1();
         th1.start();
+        th1.setPriority(Thread.MIN_PRIORITY);
         Thread2 th2=new Thread2();
         th2.start();
+        th2.setPriority(Thread.MAX_PRIORITY);
 //        System.out.println(th1.getName());
 //        th1.setName("First thread");
 //        System.out.println(th1.getName());
