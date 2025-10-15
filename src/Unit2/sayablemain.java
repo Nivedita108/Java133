@@ -5,5 +5,8 @@ public class sayablemain {
         sayablemethodreference Sayablemethodreference = new sayablemethodreference();
         sayableinterface sayable = Sayablemethodreference::saySomething;
         sayable.say();
+        sayable.sayMore();
+        sayableinterface.sayless();
+//        sayable.sum();
     }
 }

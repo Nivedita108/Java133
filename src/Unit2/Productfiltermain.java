@@ -14,10 +14,21 @@ public class Productfiltermain {
         productlist.add(new Productfilter(5,"HP4",160000));
         productlist.add(new Productfilter(6,"HP5",340000));
         productlist.add(new Productfilter(7,"HP5",520000));
-        List<Double> newList= productlist.stream().
-                filter(p->p.price>200000).
-                map(p->p.price).
-                collect(Collectors.toList());
-        System.out.println(newList);
+//        List<Double> newList= productlist.stream().
+//                filter(p->p.price>200000).
+//                map(p->p.price).
+//                collect(Collectors.toList());
+//        System.out.println(newList);
+
+
+//        productlist.stream()
+//                .filter(product -> product.price >= 300000)
+//                .forEach(product -> System.out.println(product.name));
+
+
+        long count = productlist.stream()
+                .filter(product->product.price<300000)
+                .count();
+        System.out.println(count);
     }
 }
